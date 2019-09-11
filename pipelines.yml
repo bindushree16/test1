@@ -22,7 +22,7 @@ resources:
       - name: node
         type: Bash
         configuration:
-#         inputResources:
+          inputResources:
             - name: my_releaseBundle
           runtime:
             type: image
