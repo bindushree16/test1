@@ -12,8 +12,8 @@ resources:
     type: ReleaseBundle
     configuration:
       sourceDistribution: bindu_dist
-      name: my_release_bundle_in
-      version: v0.2.2
+      name: my_release_bundle_in@
+      version: v0.2.2.2
  #     isSigned:  # optional     
  
 pipelines:
