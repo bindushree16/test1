@@ -16,7 +16,7 @@ resources:
       version: v0.2.1
  #     isSigned:  # optional     
  
- pipelines:
+pipelines:
   - name: pipeline_ranjan
     steps:
       - name: node
