@@ -12,14 +12,29 @@ resources:
     type: ReleaseBundle
     configuration:
       sourceDistribution: bindu_dist
-      name: my_release_bundle_in@
-      version: v0.2.2.2
+      name: my_release_bundle
+      version: v0.2.21
  #     isSigned:  # optional     
  
 pipelines:
   - name: pipeline11
     steps:
       - name: node
+        type: Bash
+        configuration:
+          outputResources:
+            - name: my_releaseBundle
+          runtime:
+            type: image
+            image:
+              custom:
+                name: drydock/u16
+                tag: master
+        execution:
+          onExecute:
+            - printenv
+    
+      - name: nava
         type: Bash
         configuration:
           inputResources:
@@ -32,5 +47,5 @@ pipelines:
                 tag: master
         execution:
           onExecute:
-            - printenv
+            - printenv       
 
