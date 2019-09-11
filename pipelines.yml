@@ -1,0 +1,36 @@
+  
+resources:
+  - name: repogcp_bindu
+    type: GitRepo
+    configuration:
+      gitProvider: bindu_github
+      path: bindushree16/automation_for_gcp 
+      buildOn:
+         commit: false 
+         
+  - name: my_releaseBundle
+    type: ReleaseBundle
+    configuration:
+      sourceDistribution: bindu_dist
+      name: my_release_bundle
+      version: v0.2.1
+ #     isSigned:  # optional     
+ 
+ pipelines:
+  - name: pipeline_ranjan
+    steps:
+      - name: node
+        type: Bash
+        configuration:
+#         inputResources:
+            - name: my_releaseBundle
+          runtime:
+            type: image
+            image:
+              custom:
+                name: drydock/u16
+                tag: master
+        execution:
+          onExecute:
+            - printenv
+
