@@ -1,6 +1,6 @@
   
 resources:
-  - name: repogcp_bindu
+  - name: repooo_bindu
     type: GitRepo
     configuration:
       gitProvider: bindu_github
