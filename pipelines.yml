@@ -33,6 +33,7 @@ pipelines:
         execution:
           onExecute:
             - printenv
+            - res_my_releaseBundle_version=v4.0.0
     
       - name: nava
         type: Bash
