@@ -17,7 +17,7 @@ resources:
  #     isSigned:  # optional     
  
 pipelines:
-  - name: pipeline_ranjan
+  - name: pipeline11
     steps:
       - name: node
         type: Bash
