@@ -22,7 +22,7 @@ resources:
       sourceDistribution: bindu_dist
       cityName: "*"
       serviceName: "*"
-      siteName: "*"
+     # siteName: "*"
       countryCodes:
        # - GB #edge node -> intend EU
         - CN #edge node
