@@ -21,8 +21,8 @@ resources:
     configuration:
       sourceDistribution: bindu_dist
       cityName: "*"
-      serviceName: "*"
-     # siteName: "*"
+     # serviceName: "*"
+      siteName: "*"
       countryCodes:
        # - GB #edge node -> intend EU
         - CN #edge node
