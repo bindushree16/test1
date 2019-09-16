@@ -20,9 +20,9 @@ resources:
     type: DistributionRule
     configuration:
       sourceDistribution: bindu_dist
-     # cityName: "*"
+      cityName: "*"
       serviceName: "*"
-    #  siteName: "*"
+      siteName: "*"
       countryCodes:
        # - GB #edge node -> intend EU
         - CN #edge node
