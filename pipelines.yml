@@ -73,5 +73,27 @@ pipelines:
                 tag: master
         execution:
           onExecute:
-            - printenv       
+            - printenv    
+            
+      - name: test11
+        type: Bash
+        configuration:
+        #affinityGroup: bldGroup 
+         # priority: <[0-10000]>
+         # timeoutSeconds: <job timeout limit>
+          #nodePool: <name of the nodePool>
+          chronological: true
+          inputSteps:
+            - name: nava
+    #      outputResources:
+          #  - name: distribution_rule  
+#           runtime:
+#             type: image
+#             image:
+#               custom:
+#                 name: drydock/u16
+#                 tag: master
+        execution:
+          onExecute:
+            - printenv        
 
