@@ -35,6 +35,11 @@ pipelines:
       - name: node
         type: Bash
         configuration:
+          #affinityGroup: bldGroup 
+         # priority: <[0-10000]>
+         # timeoutSeconds: <job timeout limit>
+          #nodePool: <name of the nodePool>
+          chronological: true
           outputResources:
             - name: my_releaseBundle
           runtime:
@@ -51,6 +56,11 @@ pipelines:
       - name: nava
         type: Bash
         configuration:
+        #affinityGroup: bldGroup 
+         # priority: <[0-10000]>
+         # timeoutSeconds: <job timeout limit>
+          #nodePool: <name of the nodePool>
+          chronological: false
           inputResources:
             - name: my_releaseBundle
     #      outputResources:
