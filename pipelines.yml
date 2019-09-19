@@ -111,8 +111,8 @@ pipelines:
          # chronological: true
           inputResources:
             - name: distribution_rule 
-          inputSteps:
-            - name: test11
+         # inputSteps:
+           # - name: test11
     #      outputResources:
           #  - name: distribution_rule  
 #           runtime:
