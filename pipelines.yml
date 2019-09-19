@@ -73,7 +73,8 @@ pipelines:
                 tag: master
         execution:
           onExecute:
-            - printenv    
+            - printenv 
+            - write_output distribution_rule "version=v8.0.0"
             
       - name: test11
         type: Bash
@@ -83,6 +84,8 @@ pipelines:
          # timeoutSeconds: <job timeout limit>
           #nodePool: <name of the nodePool>
           chronological: true
+          outputResources:
+            - name: distribution_rule 
           inputSteps:
             - name: nava
     #      outputResources:
