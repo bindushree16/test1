@@ -64,7 +64,7 @@ pipelines:
           inputResources:
             - name: my_releaseBundle
     #      outputResources:
-            - name: distribution_rule  
+          #  - name: distribution_rule  
           runtime:
             type: image
             image:
@@ -74,7 +74,7 @@ pipelines:
         execution:
           onExecute:
             - printenv 
-            - write_output distribution_rule "version=v8.0.0"
+          #  - write_output distribution_rule "version=v8.0.0"
             
       - name: test11
         type: Bash
@@ -98,5 +98,31 @@ pipelines:
 #                 tag: master
         execution:
           onExecute:
-            - printenv        
+            - printenv 
+            - write_output distribution_rule "version=v8.0.0"
+            
+      - name: test22
+        type: Bash
+        configuration:
+          affinityGroup: bldGroup
+         # priority: <[0-10000]>
+         # timeoutSeconds: <job timeout limit>
+          #nodePool: <name of the nodePool>
+          chronological: true
+          inputResources:
+            - name: distribution_rule 
+          inputSteps:
+            - name: nava
+    #      outputResources:
+          #  - name: distribution_rule  
+#           runtime:
+#             type: image
+#             image:
+#               custom:
+#                 name: drydock/u16
+#                 tag: master
+        execution:
+          onExecute:
+            - printenv 
+                  
 
