@@ -35,11 +35,11 @@ pipelines:
       - name: node
         type: Bash
         configuration:
-          affinityGroup: bldGroup 
+         # affinityGroup: bldGroup 
          # priority: <[0-10000]>
          # timeoutSeconds: <job timeout limit>
           #nodePool: <name of the nodePool>
-          chronological: true
+         # chronological: true
           outputResources:
             - name: my_releaseBundle
           runtime:
@@ -56,11 +56,11 @@ pipelines:
       - name: nava
         type: Bash
         configuration:
-          affinityGroup: bldGroup 
+          #affinityGroup: bldGroup 
          # priority: <[0-10000]>
          # timeoutSeconds: <job timeout limit>
           #nodePool: <name of the nodePool>
-          chronological: false
+          #chronological: false
           inputResources:
             - name: my_releaseBundle
     #      outputResources:
@@ -79,11 +79,11 @@ pipelines:
       - name: test11
         type: Bash
         configuration:
-          affinityGroup: bldGroup
+         # affinityGroup: bldGroup
          # priority: <[0-10000]>
          # timeoutSeconds: <job timeout limit>
           #nodePool: <name of the nodePool>
-          chronological: true
+         # chronological: true
           outputResources:
             - name: distribution_rule 
           inputSteps:
@@ -104,11 +104,11 @@ pipelines:
       - name: test22
         type: Bash
         configuration:
-          affinityGroup: bldGroup
+         # affinityGroup: bldGroup
          # priority: <[0-10000]>
          # timeoutSeconds: <job timeout limit>
           #nodePool: <name of the nodePool>
-          chronological: true
+         # chronological: true
           inputResources:
             - name: distribution_rule 
           inputSteps:
