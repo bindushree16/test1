@@ -112,7 +112,7 @@ pipelines:
           inputResources:
             - name: distribution_rule 
           inputSteps:
-            - name: nava
+            - name: test11
     #      outputResources:
           #  - name: distribution_rule  
 #           runtime:
