@@ -1,128 +1,21 @@
-  
 resources:
-  - name: repooo_bindu
-    type: GitRepo
+  - name: S_Bash_0085_BuildInfo
+    type: BuildInfo
     configuration:
-      gitProvider: bindu_github
-      path: bindushree16/automation_for_gcp 
-      buildOn:
-         commit: false 
-         
-  - name: my_releaseBundle
-    type: ReleaseBundle
-    configuration:
-      sourceDistribution: bindu_dist
-      name: my_release_bundle
-      version: v0.2.
-      isSigned: true
- 
-  - name: distribution_rule
-    type: DistributionRule
-    configuration:
-      sourceDistribution: bindu_dist
-      cityName: "*"
-      serviceName: "*"
-      siteName: "*"
-      countryCodes:
-       # - GB #edge node -> intend EU
-        - CN #edge node
-       # - IN #artifactory
-       # - US #artifactory
- 
+      sourceArtifactory: i_artifactory
+      buildName: mvn_sample_build_auto
+      buildNumber: 1
+      
+          
 pipelines:
-  - name: pipeline11
+  - name: pipelines_auto
     steps:
-      - name: node
+      - name: S_Bash_0085
         type: Bash
         configuration:
-         # affinityGroup: bldGroup 
-         # priority: <[0-10000]>
-         # timeoutSeconds: <job timeout limit>
-          #nodePool: <name of the nodePool>
-         # chronological: true
-          outputResources:
-            - name: my_releaseBundle
-          runtime:
-            type: image
-            image:
-              custom:
-                name: drydock/u16
-                tag: master
-        execution:
-          onExecute:
-            - printenv
-            - write_output my_releaseBundle "version=v4.0.0"
-    
-      - name: nava
-        type: Bash
-        configuration:
-          #affinityGroup: bldGroup 
-         # priority: <[0-10000]>
-         # timeoutSeconds: <job timeout limit>
-          #nodePool: <name of the nodePool>
-          #chronological: false
           inputResources:
-            - name: my_releaseBundle
-    #      outputResources:
-          #  - name: distribution_rule  
-          runtime:
-            type: image
-            image:
-              custom:
-                name: drydock/u16
-                tag: master
+            - name: S_Bash_0085_BuildInfo
+              trigger: true
         execution:
           onExecute:
             - printenv 
-          #  - write_output distribution_rule "version=v8.0.0"
-            
-      - name: test11
-        type: Bash
-        configuration:
-         # affinityGroup: bldGroup
-         # priority: <[0-10000]>
-         # timeoutSeconds: <job timeout limit>
-          #nodePool: <name of the nodePool>
-         # chronological: true
-          outputResources:
-            - name: distribution_rule 
-          inputSteps:
-            - name: nava
-    #      outputResources:
-          #  - name: distribution_rule  
-#           runtime:
-#             type: image
-#             image:
-#               custom:
-#                 name: drydock/u16
-#                 tag: master
-        execution:
-          onExecute:
-            - printenv 
-            - write_output distribution_rule "version=v8.0.0"
-            
-      - name: test22
-        type: Bash
-        configuration:
-         # affinityGroup: bldGroup
-         # priority: <[0-10000]>
-         # timeoutSeconds: <job timeout limit>
-          #nodePool: <name of the nodePool>
-         # chronological: true
-          inputResources:
-            - name: distribution_rule 
-         # inputSteps:
-           # - name: test11
-    #      outputResources:
-          #  - name: distribution_rule  
-#           runtime:
-#             type: image
-#             image:
-#               custom:
-#                 name: drydock/u16
-#                 tag: master
-        execution:
-          onExecute:
-            - printenv 
-                  
-
