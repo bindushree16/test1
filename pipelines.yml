@@ -1,21 +1,29 @@
 resources:
-  - name: S_Bash_0085_BuildInfo
-    type: BuildInfo
+  - name: bigit
+    type: GitRepo
     configuration:
-      sourceArtifactory: i_artifactory
-      buildName: mvn_sample_build_auto
-      buildNumber: 1
+      path: bindushree16/test1
+      gitProvider: bi
+
+
+# resources:
+#   - name: S_Bash_0085_BuildInfo
+#     type: BuildInfo
+#     configuration:
+#       sourceArtifactory: i_artifactory
+#       buildName: mvn_sample_build_auto
+#       buildNumber: 1
       
           
-pipelines:
-  - name: pipelines_auto
-    steps:
-      - name: S_Bash_0085
-        type: Bash
-        configuration:
-          inputResources:
-            - name: S_Bash_0085_BuildInfo
-              trigger: true
-        execution:
-          onExecute:
-            - printenv 
+# pipelines:
+#   - name: pipelines_auto
+#     steps:
+#       - name: S_Bash_0085
+#         type: Bash
+#         configuration:
+#           inputResources:
+#             - name: S_Bash_0085_BuildInfo
+#               trigger: true
+#         execution:
+#           onExecute:
+#             - printenv 
