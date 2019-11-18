@@ -1,9 +1,22 @@
 resources:
-  - name: bigit
+  - name: GitRepo
     type: GitRepo
     configuration:
       path: bindushree16/test1
       gitProvider: bi
+      
+pipelines:
+  - name: pipelines_auto
+    steps:
+      - name: new_pipeline
+        type: Bash
+        configuration:
+          inputResources:
+            - name: GitRepo
+              trigger: true
+        execution:
+          onExecute:
+            - printenv 
 
 
 # resources:
