@@ -11,7 +11,7 @@ pipelines:
       - name: new_pipeline
         type: Bash
         configuration:
-        runtime:
+          runtime:
             type: image
             image:
               auto:
