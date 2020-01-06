@@ -10,14 +10,14 @@ pipelines:
     steps:
       - name: new_pipeline
         type: Bash
-        configuration:
-          runtime:
-            type: image
-            image:
-              auto:
-                language: java
-                versions:
-                  - "8"
+#         configuration:
+#           runtime:
+#             type: image
+#             image:
+#               auto:
+#                 language: java
+#                 versions:
+#                   - "8"
 #           inputResources:
 #             - name: GitRepo
         execution:
