@@ -17,7 +17,7 @@ pipelines:
               auto:
                 language: java
                 versions:
-                  - "11"
+                  - "13"
 #           inputResources:
 #             - name: GitRepo
         execution:
