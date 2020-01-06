@@ -15,9 +15,9 @@ pipelines:
             type: image
             image:
               auto:
-                language: go
+                language: java 
                 versions:
-                  - "1.12.6"
+                  - "11"
 #           inputResources:
 #             - name: GitRepo
         execution:
