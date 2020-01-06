@@ -1,9 +1,9 @@
-resources:
-  - name: GitRepo
-    type: GitRepo
-    configuration:
-      path: bindushree16/test1
-      gitProvider: bi
+# resources:
+#   - name: GitRepo
+#     type: GitRepo
+#     configuration:
+#       path: bindushree16/test1
+#       gitProvider: bi
       
 pipelines:
   - name: pipelines_auto
@@ -11,12 +11,19 @@ pipelines:
       - name: new_pipeline
         type: Bash
         configuration:
-          inputResources:
-            - name: GitRepo
-              trigger: true
+        runtime:
+            type: image
+            image:
+              auto:
+                language: node
+                versions:
+                  - "10.16.3"
+#           inputResources:
+#             - name: GitRepo
         execution:
           onExecute:
             - printenv 
+            - node --version
 
 
 # resources:
