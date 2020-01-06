@@ -10,14 +10,14 @@ pipelines:
     steps:
       - name: new_pipeline
         type: Bash
-#         configuration:
-#           runtime:
-#             type: image
-#             image:
-#               auto:
-#                 language: cpp
-#                 versions:
-#                   - "8.0.0"
+        configuration:
+          runtime:
+            type: image
+            image:
+              auto:
+                language: cpp
+                versions:
+                  - "7.0.1"
 #           inputResources:
 #             - name: GitRepo
         execution:
