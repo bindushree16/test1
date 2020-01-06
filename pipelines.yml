@@ -17,7 +17,7 @@ pipelines:
               auto:
                 language: cpp
                 versions:
-                  - "7.0.1"
+                  - "8.3.1"
 #           inputResources:
 #             - name: GitRepo
         execution:
