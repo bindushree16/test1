@@ -74,88 +74,88 @@
 #             - printenv  
 
 # #java
-# pipelines:
-#   - name: pipelines_auto
-#     steps:
-#       - name: new_pipeline5
-#         type: Bash
-#         configuration:
-#           runtime:
-#             type: image
-#             image:
-#               auto:
-#                 language: java
-#                 versions:
-#                   - "8"
-#         execution:
-#           onExecute:
-#             - printenv
-
-#       - name: new_pipeline6
-#         type: Bash
-#         configuration:
-#             inputSteps:
-#             - name: new_pipeline5
-#           runtime:
-#             type: image
-#             image:
-#               auto:
-#                 language: java
-#                 versions:
-#                   - "11"
-#         execution:
-#           onExecute:
-#             - printenv  
-            
-#       - name: new_pipeline7
-#         type: Bash
-#         configuration:
-#             inputSteps:
-#             - name: new_pipeline6
-#           runtime:
-#             type: image
-#             image:
-#               auto:
-#                 language: java
-#                 versions:
-#                   - "13"
-#         execution:
-#           onExecute:
-#             - printenv  
-
-#go 
 pipelines:
   - name: pipelines_auto
     steps:
-      - name: new_pipeline8
+      - name: new_pipeline5
         type: Bash
         configuration:
           runtime:
             type: image
             image:
               auto:
-                language: go
+                language: java
                 versions:
-                  - "1.11.11"
+                  - "8"
         execution:
           onExecute:
             - printenv
 
-      - name: new_pipeline9
+      - name: new_pipeline6
         type: Bash
         configuration:
           inputSteps:
-            - name: new_pipeline8
+            - name: new_pipeline5
           runtime:
             type: image
             image:
               auto:
-                language: go
+                language: java
                 versions:
-                  - "1.12.6"
+                  - "11"
         execution:
           onExecute:
-            - printenv              
+            - printenv  
+            
+      - name: new_pipeline7
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: new_pipeline6
+          runtime:
+            type: image
+            image:
+              auto:
+                language: java
+                versions:
+                  - "13"
+        execution:
+          onExecute:
+            - printenv  
+
+#go 
+# pipelines:
+#   - name: pipelines_auto
+#     steps:
+#       - name: new_pipeline8
+#         type: Bash
+#         configuration:
+#           runtime:
+#             type: image
+#             image:
+#               auto:
+#                 language: go
+#                 versions:
+#                   - "1.11.11"
+#         execution:
+#           onExecute:
+#             - printenv
+
+#       - name: new_pipeline9
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#             - name: new_pipeline8
+#           runtime:
+#             type: image
+#             image:
+#               auto:
+#                 language: go
+#                 versions:
+#                   - "1.12.6"
+#         execution:
+#           onExecute:
+#             - printenv              
             
             
             
