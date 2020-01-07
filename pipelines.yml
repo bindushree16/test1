@@ -144,7 +144,7 @@ pipelines:
       - name: new_pipeline9
         type: Bash
         configuration:
-            inputSteps:
+          inputSteps:
             - name: new_pipeline8
           runtime:
             type: image
