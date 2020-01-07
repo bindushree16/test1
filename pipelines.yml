@@ -40,38 +40,38 @@
 #             - printenv
 
 # #ccp
-pipelines:
-  - name: pipelines_auto
-    steps:
-      - name: new_pipeline3
-        type: Bash
-        configuration:
-          runtime:
-            type: image
-            image:
-              auto:
-                language: cpp
-                versions:
-                  - "9.0.0"
-        execution:
-          onExecute:
-            - printenv
+# pipelines:
+#   - name: pipelines_auto
+#     steps:
+#       - name: new_pipeline3
+#         type: Bash
+#         configuration:
+#           runtime:
+#             type: image
+#             image:
+#               auto:
+#                 language: cpp
+#                 versions:
+#                   - "9.0.0"
+#         execution:
+#           onExecute:
+#             - printenv
             
-      - name: new_pipeline4
-        type: Bash
-        configuration:
-          inputSteps:
-            - name: new_pipeline3
-          runtime:
-            type: image
-            image:
-              auto:
-                language: cpp
-                versions:
-                  - "8.0.0"
-        execution:
-          onExecute:
-            - printenv  
+#       - name: new_pipeline4
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#             - name: new_pipeline3
+#           runtime:
+#             type: image
+#             image:
+#               auto:
+#                 language: cpp
+#                 versions:
+#                   - "8.0.0"
+#         execution:
+#           onExecute:
+#             - printenv  
 
 # #java
 # pipelines:
@@ -123,39 +123,39 @@ pipelines:
 #           onExecute:
 #             - printenv  
 
-##go 
-# pipelines:
-#   - name: pipelines_auto
-#     steps:
-#       - name: new_pipeline8
-#         type: Bash
-#         configuration:
-#           runtime:
-#             type: image
-#             image:
-#               auto:
-#                 language: go
-#                 versions:
-#                   - "1.11.11"
-#         execution:
-#           onExecute:
-#             - printenv
+#go 
+pipelines:
+  - name: pipelines_auto
+    steps:
+      - name: new_pipeline8
+        type: Bash
+        configuration:
+          runtime:
+            type: image
+            image:
+              auto:
+                language: go
+                versions:
+                  - "1.11.11"
+        execution:
+          onExecute:
+            - printenv
 
-#       - name: new_pipeline9
-#         type: Bash
-#         configuration:
-#             inputSteps:
-#             - name: new_pipeline8
-#           runtime:
-#             type: image
-#             image:
-#               auto:
-#                 language: go
-#                 versions:
-#                   - "1.12.6"
-#         execution:
-#           onExecute:
-#             - printenv              
+      - name: new_pipeline9
+        type: Bash
+        configuration:
+            inputSteps:
+            - name: new_pipeline8
+          runtime:
+            type: image
+            image:
+              auto:
+                language: go
+                versions:
+                  - "1.12.6"
+        execution:
+          onExecute:
+            - printenv              
             
             
             
