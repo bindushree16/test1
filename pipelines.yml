@@ -5,7 +5,7 @@
 #       path: bindushree16/test1
 #       gitProvider: bi
 
-# pipelines:
+pipelines:
   - name: pipelines_auto
     steps:
       - name: new_pipeline1
