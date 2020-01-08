@@ -142,7 +142,7 @@ pipelines:
             - git --version
             - pip --version
             - virtualenv --version
-            - eb --version
+#             - eb --version
             - az --version
             - jfrog --version
             - gcloud version
@@ -172,7 +172,7 @@ pipelines:
             - git --version
             - pip --version
             - virtualenv --version
-            - eb --version
+#             - eb --version
             - az --version
             - jfrog --version
             - gcloud version
@@ -183,105 +183,105 @@ pipelines:
             - packer --version   
 
 # #java
-pipelines:
-  - name: pipelines_auto
-    steps:
-      - name: new_pipeline5
-        type: Bash
-        configuration:
-          runtime:
-            type: image
-            image:
-              auto:
-                language: java
-                versions:
-                  - "8"
-        execution:
-          onExecute:
-            - printenv 
-            - java -version
-            - ant -version
-            - gradle --version
-            - mvn --version
-            - aws --version
-            - git --version
-            - pip --version
-            - virtualenv --version
-#             - eb --version
-            - az --version
-            - jfrog --version
-            - gcloud version
-            - kubectl version --client
-            - terraform --version
-            - helm version --client
-            - ansible --version
-            - packer --version
+# pipelines:
+#   - name: pipelines_auto
+#     steps:
+#       - name: new_pipeline5
+#         type: Bash
+#         configuration:
+#           runtime:
+#             type: image
+#             image:
+#               auto:
+#                 language: java
+#                 versions:
+#                   - "8"
+#         execution:
+#           onExecute:
+#             - printenv 
+#             - java -version
+#             - ant -version
+#             - gradle --version
+#             - mvn --version
+#             - aws --version
+#             - git --version
+#             - pip --version
+#             - virtualenv --version
+# #             - eb --version
+#             - az --version
+#             - jfrog --version
+#             - gcloud version
+#             - kubectl version --client
+#             - terraform --version
+#             - helm version --client
+#             - ansible --version
+#             - packer --version
 
-      - name: new_pipeline6
-        type: Bash
-        configuration:
-          inputSteps:
-            - name: new_pipeline5
-          runtime:
-            type: image
-            image:
-              auto:
-                language: java
-                versions:
-                  - 11
-        execution:
-          onExecute:
-            - printenv 
-            - java -version
-            - ant -version
-            - gradle --version
-            - mvn --version
-            - aws --version
-            - git --version
-            - pip --version
-            - virtualenv --version
-#             - eb --version
-            - az --version
-            - jfrog --version
-            - gcloud version
-            - kubectl version --client
-            - terraform --version
-            - helm version --client
-            - ansible --version
-            - packer --version 
+#       - name: new_pipeline6
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#             - name: new_pipeline5
+#           runtime:
+#             type: image
+#             image:
+#               auto:
+#                 language: java
+#                 versions:
+#                   - 11
+#         execution:
+#           onExecute:
+#             - printenv 
+#             - java -version
+#             - ant -version
+#             - gradle --version
+#             - mvn --version
+#             - aws --version
+#             - git --version
+#             - pip --version
+#             - virtualenv --version
+# #             - eb --version
+#             - az --version
+#             - jfrog --version
+#             - gcloud version
+#             - kubectl version --client
+#             - terraform --version
+#             - helm version --client
+#             - ansible --version
+#             - packer --version 
             
-      - name: new_pipeline7
-        type: Bash
-        configuration:
-          inputSteps:
-            - name: new_pipeline6
-          runtime:
-            type: image
-            image:
-              auto:
-                language: java
-                versions:
-                  - "13"
-        execution:
-          onExecute:
-            - printenv 
-            - java -version
-            - ant -version
-            - gradle --version
-            - mvn --version
-            - aws --version
-            - git --version
-            - pip --version
-            - virtualenv --version
-#             - eb --version
-            - az --version
-            - jfrog --version
-            - gcloud version
-            - kubectl version --client
-            - terraform --version
-            - helm version --client
-            - ansible --version
-            - packer --version
+#       - name: new_pipeline7
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#             - name: new_pipeline6
+#           runtime:
+#             type: image
+#             image:
+#               auto:
+#                 language: java
+#                 versions:
+#                   - "13"
+#         execution:
+#           onExecute:
+#             - printenv 
+#             - java -version
+#             - ant -version
+#             - gradle --version
+#             - mvn --version
+#             - aws --version
+#             - git --version
+#             - pip --version
+#             - virtualenv --version
+# #             - eb --version
+#             - az --version
+#             - jfrog --version
+#             - gcloud version
+#             - kubectl version --client
+#             - terraform --version
+#             - helm version --client
+#             - ansible --version
+#             - packer --version
 
 
 ##go 
