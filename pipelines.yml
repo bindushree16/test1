@@ -151,6 +151,7 @@ pipelines:
             - helm version --client
             - ansible --version
             - packer --version 
+            - terraform --version
             
       - name: new_pipeline4
         type: Bash
@@ -177,10 +178,11 @@ pipelines:
             - jfrog --version
             - gcloud version
             - kubectl version --client
-            - terraform --version
+#             - terraform --version
             - helm version --client
             - ansible --version
-            - packer --version   
+            - packer --version
+            - terraform --version
 
 # #java
 # pipelines:
