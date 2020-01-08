@@ -21,7 +21,20 @@
 #                   - 10.18.0
 #         execution:
 #           onExecute:
-#             - printenv
+#             - node -v      
+#             - aws --version
+#             - git --version
+#             - pip --version
+#             - virtualenv --version
+#             - eb --version
+#             - az --version
+#             - jfrog --version
+#             - gcloud version
+#             - kubectl version --client
+#             - terraform --version
+#             - helm version --client
+#             - ansible --version
+#             - packer --version 
 
 #       - name: new_pipeline2
 #         type: Bash
@@ -37,7 +50,20 @@
 #                   - "8.17.0"
 #         execution:
 #           onExecute:
-#             - printenv
+#             - node -v      
+#             - aws --version
+#             - git --version
+#             - pip --version
+#             - virtualenv --version
+#             - eb --version
+#             - az --version
+#             - jfrog --version
+#             - gcloud version
+#             - kubectl version --client
+#             - terraform --version
+#             - helm version --client
+#             - ansible --version
+#             - packer --version 
             
 #       - name: new_pipeliness
 #         type: Bash
@@ -53,7 +79,20 @@
 #                   - "12.14.0"
 #         execution:
 #           onExecute:
-#             - printenv      
+#             - node -v      
+#             - aws --version
+#             - git --version
+#             - pip --version
+#             - virtualenv --version
+#             - eb --version
+#             - az --version
+#             - jfrog --version
+#             - gcloud version
+#             - kubectl version --client
+#             - terraform --version
+#             - helm version --client
+#             - ansible --version
+#             - packer --version 
 
 # #ccp
 pipelines:
@@ -71,7 +110,21 @@ pipelines:
                   - 9.0.0
         execution:
           onExecute:
-            - printenv
+            - clang --version
+            - gcc --version     
+            - aws --version
+            - git --version
+            - pip --version
+            - virtualenv --version
+            - eb --version
+            - az --version
+            - jfrog --version
+            - gcloud version
+            - kubectl version --client
+            - terraform --version
+            - helm version --client
+            - ansible --version
+            - packer --version 
             
       - name: new_pipeline4
         type: Bash
@@ -87,7 +140,21 @@ pipelines:
                   - "8.0.0"
         execution:
           onExecute:
-            - printenv  
+            - clang --version
+            - gcc --version     
+            - aws --version
+            - git --version
+            - pip --version
+            - virtualenv --version
+            - eb --version
+            - az --version
+            - jfrog --version
+            - gcloud version
+            - kubectl version --client
+            - terraform --version
+            - helm version --client
+            - ansible --version
+            - packer --version   
 
 # #java
 # pipelines:
@@ -105,7 +172,24 @@ pipelines:
 #                   - "8"
 #         execution:
 #           onExecute:
-#             - printenv
+#             - printenv 
+#             - java -version
+#             - ant -version
+#             - gradle --version
+#             - mvn --version
+#             - aws --version
+#             - git --version
+#             - pip --version
+#             - virtualenv --version
+#             - eb --version
+#             - az --version
+#             - jfrog --version
+#             - gcloud version
+#             - kubectl version --client
+#             - terraform --version
+#             - helm version --client
+#             - ansible --version
+#             - packer --version
 
 #       - name: new_pipeline6
 #         type: Bash
@@ -121,7 +205,24 @@ pipelines:
 #                   - 11
 #         execution:
 #           onExecute:
-#             - printenv  
+#             - printenv 
+#             - java -version
+#             - ant -version
+#             - gradle --version
+#             - mvn --version
+#             - aws --version
+#             - git --version
+#             - pip --version
+#             - virtualenv --version
+#             - eb --version
+#             - az --version
+#             - jfrog --version
+#             - gcloud version
+#             - kubectl version --client
+#             - terraform --version
+#             - helm version --client
+#             - ansible --version
+#             - packer --version 
             
 #       - name: new_pipeline7
 #         type: Bash
@@ -137,7 +238,25 @@ pipelines:
 #                   - "13"
 #         execution:
 #           onExecute:
-#             - printenv  
+#             - printenv 
+#             - java -version
+#             - ant -version
+#             - gradle --version
+#             - mvn --version
+#             - aws --version
+#             - git --version
+#             - pip --version
+#             - virtualenv --version
+#             - eb --version
+#             - az --version
+#             - jfrog --version
+#             - gcloud version
+#             - kubectl version --client
+#             - terraform --version
+#             - helm version --client
+#             - ansible --version
+#             - packer --version
+
 
 ##go 
 # pipelines:
@@ -153,9 +272,24 @@ pipelines:
 #                 language: go
 #                 versions:
 #                   - 1.11.13
-#         execution:
-#           onExecute:
-#             - printenv
+        execution:
+          onExecute:
+            - source /root/.gvm/scripts/gvm
+            - gvm list
+            - gvm use 1.11
+            - aws --version
+            - git --version
+            - pip --version
+            - virtualenv --version
+            - eb --version
+            - az --version
+            - jfrog --version
+            - gcloud version
+            - kubectl version --client
+            - terraform --version
+            - helm version --client
+            - ansible --version
+            - packer --version
 
 #       - name: new_pipeline9
 #         type: Bash
@@ -171,7 +305,9 @@ pipelines:
 #                   - "1.12.14"
 #         execution:
 #           onExecute:
-#             - printenv 
+#               - source /root/.gvm/scripts/gvm
+#               - gvm list
+#               - gvm use 1.12
 
 #       - name: new_pipeline10
 #         type: Bash
@@ -187,7 +323,22 @@ pipelines:
 #                   - "1.13.5"
 #         execution:
 #           onExecute:
-#             - printenv 
+#             - source /root/.gvm/scripts/gvm
+#             - gvm list
+#             - gvm use 1.11
+#             - aws --version
+#             - git --version
+#             - pip --version
+#             - virtualenv --version
+#             - eb --version
+#             - az --version
+#             - jfrog --version
+#             - gcloud version
+#             - kubectl version --client
+#             - terraform --version
+#             - helm version --client
+#             - ansible --version
+#             - packer --version
             
             
             
