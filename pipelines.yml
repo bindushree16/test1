@@ -135,7 +135,7 @@ pipelines:
             - kubectl version --client
 #             - terraform --version
             - helm version --client
-            - ansible --version
+#             - ansible --version
             - packer --version 
             
       - name: new_pipeline4
