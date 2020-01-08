@@ -147,7 +147,7 @@ pipelines:
             - jfrog --version
             - gcloud version
             - kubectl version --client
-            - terraform --version
+#             - terraform --version
             - helm version --client
             - ansible --version
             - packer --version 
