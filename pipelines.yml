@@ -5,6 +5,16 @@
 #       path: bindushree16/test1
 #       gitProvider: bi
 
+pipelines:
+  - name: pipelines_auto
+    steps:
+      - name: new_pipeline1
+        type: Bash
+        execution:
+          onExecute:
+            - node -v    
+
+
 ##node
 # pipelines:
 #   - name: pipelines_auto
@@ -95,66 +105,66 @@
 #             - packer --version 
 
 # #ccp
-pipelines:
-  - name: pipelines_auto
-    steps:
-      - name: new_pipeline3
-        type: Bash
-        configuration:
-          runtime:
-            type: image
-            image:
-              auto:
-                language: cpp
-                versions:
-                  - 9.0.0
-        execution:
-          onExecute:
-            - clang --version
-            - gcc --version     
-            - aws --version
-            - git --version
-            - pip --version
-            - virtualenv --version
-            - eb --version
-            - az --version
-            - jfrog --version
-            - gcloud version
-            - kubectl version --client
-            - terraform --version
-            - helm version --client
-            - ansible --version
-            - packer --version 
+# pipelines:
+#   - name: pipelines_auto
+#     steps:
+#       - name: new_pipeline3
+#         type: Bash
+#         configuration:
+#           runtime:
+#             type: image
+#             image:
+#               auto:
+#                 language: cpp
+#                 versions:
+#                   - 9.0.0
+#         execution:
+#           onExecute:
+#             - clang --version
+#             - gcc --version     
+#             - aws --version
+#             - git --version
+#             - pip --version
+#             - virtualenv --version
+#             - eb --version
+#             - az --version
+#             - jfrog --version
+#             - gcloud version
+#             - kubectl version --client
+#             - terraform --version
+#             - helm version --client
+#             - ansible --version
+#             - packer --version 
             
-      - name: new_pipeline4
-        type: Bash
-        configuration:
-          inputSteps:
-            - name: new_pipeline3
-          runtime:
-            type: image
-            image:
-              auto:
-                language: cpp
-                versions:
-                  - "8.0.0"
-        execution:
-          onExecute:
-            - clang --version
-            - gcc --version     
-            - aws --version
-            - git --version
-            - pip --version
-            - virtualenv --version
-            - eb --version
-            - az --version
-            - jfrog --version
-            - gcloud version
-            - kubectl version --client
-            - terraform --version
-            - helm version --client
-            - ansible --version
-            - packer --version   
+#       - name: new_pipeline4
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#             - name: new_pipeline3
+#           runtime:
+#             type: image
+#             image:
+#               auto:
+#                 language: cpp
+#                 versions:
+#                   - "8.0.0"
+#         execution:
+#           onExecute:
+#             - clang --version
+#             - gcc --version     
+#             - aws --version
+#             - git --version
+#             - pip --version
+#             - virtualenv --version
+#             - eb --version
+#             - az --version
+#             - jfrog --version
+#             - gcloud version
+#             - kubectl version --client
+#             - terraform --version
+#             - helm version --client
+#             - ansible --version
+#             - packer --version   
 
 # #java
 # pipelines:
