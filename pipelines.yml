@@ -320,6 +320,19 @@ pipelines:
               - source /root/.gvm/scripts/gvm
               - gvm list
               - gvm use 1.12
+              - aws --version
+              - git --version
+              - pip --version
+              - virtualenv --version
+              - eb --version
+              - az --version
+              - jfrog --version
+              - gcloud version
+              - kubectl version --client
+              - terraform --version
+              - helm version --client
+              - ansible --version
+              - packer --version
 
       - name: new_pipeline10
         type: Bash
@@ -337,7 +350,7 @@ pipelines:
           onExecute:
             - source /root/.gvm/scripts/gvm
             - gvm list
-            - gvm use 1.11
+            - gvm use 1.13
             - aws --version
             - git --version
             - pip --version
