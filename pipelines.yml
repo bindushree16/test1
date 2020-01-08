@@ -139,7 +139,7 @@
 #           onExecute:
 #             - printenv  
 
-go 
+##go 
 pipelines:
   - name: pipelines_auto
     steps:
