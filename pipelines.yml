@@ -207,7 +207,7 @@ pipelines:
             - git --version
             - pip --version
             - virtualenv --version
-            - eb --version
+#             - eb --version
             - az --version
             - jfrog --version
             - gcloud version
@@ -240,7 +240,7 @@ pipelines:
             - git --version
             - pip --version
             - virtualenv --version
-            - eb --version
+#             - eb --version
             - az --version
             - jfrog --version
             - gcloud version
@@ -273,7 +273,7 @@ pipelines:
             - git --version
             - pip --version
             - virtualenv --version
-            - eb --version
+#             - eb --version
             - az --version
             - jfrog --version
             - gcloud version
