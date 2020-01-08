@@ -121,68 +121,68 @@
 #             - packer --version 
 
 # #ccp
-pipelines:
-  - name: pipelines_auto
-    steps:
-      - name: new_pipeline3
-        type: Bash
-        configuration:
-          runtime:
-            type: image
-            image:
-              auto:
-                language: cpp
-                versions:
-                  - 7.0.1
-        execution:
-          onExecute:
-            - clang --version
-            - gcc --version     
-            - aws --version
-            - git --version
-            - pip --version
-            - virtualenv --version
-#             - eb --version
-            - az --version
-            - jfrog --version
-            - gcloud version
-            - kubectl version --client
+# pipelines:
+#   - name: pipelines_auto
+#     steps:
+#       - name: new_pipeline3
+#         type: Bash
+#         configuration:
+#           runtime:
+#             type: image
+#             image:
+#               auto:
+#                 language: cpp
+#                 versions:
+#                   - 7.0.1
+#         execution:
+#           onExecute:
+#             - clang --version
+#             - gcc --version     
+#             - aws --version
+#             - git --version
+#             - pip --version
+#             - virtualenv --version
+# #             - eb --version
+#             - az --version
+#             - jfrog --version
+#             - gcloud version
+#             - kubectl version --client
+# #             - terraform --version
+#             - helm version --client
+#             - ansible --version
+#             - packer --version 
 #             - terraform --version
-            - helm version --client
-            - ansible --version
-            - packer --version 
-            - terraform --version
             
-      - name: new_pipeline4
-        type: Bash
-        configuration:
-          inputSteps:
-            - name: new_pipeline3
-          runtime:
-            type: image
-            image:
-              auto:
-                language: cpp
-                versions:
-                  - "8.3.1"
-        execution:
-          onExecute:
-            - clang --version
-            - gcc --version     
-            - aws --version
-            - git --version
-            - pip --version
-            - virtualenv --version
-#             - eb --version
-            - az --version
-            - jfrog --version
-            - gcloud version
-            - kubectl version --client
+#       - name: new_pipeline4
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#             - name: new_pipeline3
+#           runtime:
+#             type: image
+#             image:
+#               auto:
+#                 language: cpp
+#                 versions:
+#                   - "8.3.1"
+#         execution:
+#           onExecute:
+#             - clang --version
+#             - gcc --version     
+#             - aws --version
+#             - git --version
+#             - pip --version
+#             - virtualenv --version
+# #             - eb --version
+#             - az --version
+#             - jfrog --version
+#             - gcloud version
+#             - kubectl version --client
+# #             - terraform --version
+#             - helm version --client
+#             - ansible --version
+#             - packer --version
 #             - terraform --version
-            - helm version --client
-            - ansible --version
-            - packer --version
-            - terraform --version
 
 # #java
 # pipelines:
@@ -287,99 +287,102 @@ pipelines:
 
 
 ##go 
-# pipelines:
-#   - name: pipelines_auto
-#     steps:
-#       - name: new_pipeline8
-#         type: Bash
-#         configuration:
-#           runtime:
-#             type: image
-#             image:
-#               auto:
-#                 language: go
-#                 versions:
-#                   - 1.11.13
-#         execution:
-#           onExecute:
-#             - source /root/.gvm/scripts/gvm
-#             - gvm list
-#             - gvm use 1.11
-#             - aws --version
-#             - git --version
-#             - pip --version
-#             - virtualenv --version
+pipelines:
+  - name: pipelines_auto
+    steps:
+      - name: new_pipeline8
+        type: Bash
+        configuration:
+          runtime:
+            type: image
+            image:
+              auto:
+                language: go
+                versions:
+                  - 1.11.13
+        execution:
+          onExecute:
+            - source /root/.gvm/scripts/gvm
+            - gvm list
+            - gvm use 1.11
+            - aws --version
+            - git --version
+            - pip --version
+            - virtualenv --version
 #             - eb --version
-#             - az --version
-#             - jfrog --version
-#             - gcloud version
+            - az --version
+            - jfrog --version
+            - gcloud version
 #             - kubectl version --client
-#             - terraform --version
-#             - helm version --client
-#             - ansible --version
-#             - packer --version
+            - terraform --version
+            - helm version --client
+            - ansible --version
+            - packer --version
+            - kubectl version --client
 
-#       - name: new_pipeline9
-#         type: Bash
-#         configuration:
-#           inputSteps:
-#             - name: new_pipeline8
-#           runtime:
-#             type: image
-#             image:
-#               auto:
-#                 language: go
-#                 versions:
-#                   - "1.12.14"
-#         execution:
-#           onExecute:
-#               - source /root/.gvm/scripts/gvm
-#               - gvm list
-#               - gvm use 1.12
-#               - aws --version
-#               - git --version
-#               - pip --version
-#               - virtualenv --version
+      - name: new_pipeline9
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: new_pipeline8
+          runtime:
+            type: image
+            image:
+              auto:
+                language: go
+                versions:
+                  - "1.12.14"
+        execution:
+          onExecute:
+              - source /root/.gvm/scripts/gvm
+              - gvm list
+              - gvm use 1.12
+              - aws --version
+              - git --version
+              - pip --version
+              - virtualenv --version
 #               - eb --version
-#               - az --version
-#               - jfrog --version
-#               - gcloud version
+              - az --version
+              - jfrog --version
+              - gcloud version
 #               - kubectl version --client
-#               - terraform --version
-#               - helm version --client
-#               - ansible --version
-#               - packer --version
+              - terraform --version
+              - helm version --client
+              - ansible --version
+              - packer --version
+              - kubectl version --client 
 
-#       - name: new_pipeline10
-#         type: Bash
-#         configuration:
-#           inputSteps:
-#             - name: new_pipeline9
-#           runtime:
-#             type: image
-#             image:
-#               auto:
-#                 language: go
-#                 versions:
-#                   - "1.13.5"
-#         execution:
-#           onExecute:
-#             - source /root/.gvm/scripts/gvm
-#             - gvm list
-#             - gvm use 1.13
-#             - aws --version
-#             - git --version
-#             - pip --version
-#             - virtualenv --version
+      - name: new_pipeline10
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: new_pipeline9
+          runtime:
+            type: image
+            image:
+              auto:
+                language: go
+                versions:
+                  - "1.13.5"
+        execution:
+          onExecute:
+            - source /root/.gvm/scripts/gvm
+            - gvm list
+            - gvm use 1.13
+            - aws --version
+            - git --version
+            - pip --version
+            - virtualenv --version
 #             - eb --version
-#             - az --version
-#             - jfrog --version
-#             - gcloud version
+            - az --version
+            - jfrog --version
+            - gcloud version
 #             - kubectl version --client
-#             - terraform --version
-#             - helm version --client
-#             - ansible --version
-#             - packer --version
+            - terraform --version
+            - helm version --client
+            - ansible --version
+            - packer --version
+            - kubectl version --client
             
             
             
