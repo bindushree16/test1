@@ -5,14 +5,47 @@
 #       path: bindushree16/test1
 #       gitProvider: bi
 
+# pipelines:
+#   - name: pipelines_auto
+#     steps:
+#       - name: new_pipeline1
+#         type: Bash
+#         execution:
+#           onExecute:
+#             - node -v 
+#             - npm --version
+#             - aws --version
+#             - git --version
+#             - pip --version
+#             - virtualenv --version
+#             - eb --version
+#             - az --version
+#             - jfrog --version
+#             - gcloud version
+#             - kubectl version --client
+#             - terraform --version
+#             - helm version --client
+#             - ansible --version
+#             - packer --version             
+
+
+##node
 pipelines:
   - name: pipelines_auto
     steps:
       - name: new_pipeline1
         type: Bash
+        configuration:
+          runtime:
+            type: image
+            image:
+              auto:
+                language: node 
+                versions:
+                  - 10.18.0
         execution:
           onExecute:
-            - node -v 
+            - node -v   
             - npm --version
             - aws --version
             - git --version
@@ -26,40 +59,7 @@ pipelines:
             - terraform --version
             - helm version --client
             - ansible --version
-            - packer --version             
-
-
-##node
-# pipelines:
-#   - name: pipelines_auto
-#     steps:
-#       - name: new_pipeline1
-#         type: Bash
-#         configuration:
-#           runtime:
-#             type: image
-#             image:
-#               auto:
-#                 language: node 
-#                 versions:
-#                   - 10.18.0
-#         execution:
-#           onExecute:
-#             - node -v   
-#             - npm --version
-#             - aws --version
-#             - git --version
-#             - pip --version
-#             - virtualenv --version
-# #             - eb --version
-#             - az --version
-#             - jfrog --version
-#             - gcloud version
-#             - kubectl version --client
-#             - terraform --version
-#             - helm version --client
-#             - ansible --version
-#             - packer --version 
+            - packer --version 
 
 #       - name: new_pipeline2
 #         type: Bash
