@@ -61,64 +61,64 @@ pipelines:
             - ansible --version
             - packer --version 
 
-#       - name: new_pipeline2
-#         type: Bash
-#         configuration:
-#           inputSteps:
-#             - name: new_pipeline1
-#           runtime:
-#             type: image
-#             image:
-#               auto:
-#                 language: node 
-#                 versions:
-#                   - "8.17.0"
-#         execution:
-#           onExecute:
-#             - node -v   
-#             - npm --version
-#             - aws --version
-#             - git --version
-#             - pip --version
-#             - virtualenv --version
-# #             - eb --version
-#             - az --version
-#             - jfrog --version
-#             - gcloud version
-#             - kubectl version --client
-#             - terraform --version
-#             - helm version --client
-#             - ansible --version
-#             - packer --version            
-#       - name: new_pipeliness
-#         type: Bash
-#         configuration:
-#           inputSteps:
-#             - name: new_pipeline2
-#           runtime:
-#             type: image
-#             image:
-#               auto:
-#                 language: node 
-#                 versions:
-#                   - "12.14.0"
-#         execution:
-#           onExecute:
-#             - node -v  
-#             - npm --version
-#             - aws --version
-#             - git --version
-#             - pip --version
-#             - virtualenv --version
-# #             - eb --version
-#             - az --version
-#             - jfrog --version
-#             - gcloud version
-#             - kubectl version --client
-#             - terraform --version
-#             - helm version --client
-#             - ansible --version
-#             - packer --version 
+      - name: new_pipeline2
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: new_pipeline1
+          runtime:
+            type: image
+            image:
+              auto:
+                language: node 
+                versions:
+                  - "8.17.0"
+        execution:
+          onExecute:
+            - node -v   
+            - npm --version
+            - aws --version
+            - git --version
+            - pip --version
+            - virtualenv --version
+#             - eb --version
+            - az --version
+            - jfrog --version
+            - gcloud version
+            - kubectl version --client
+            - terraform --version
+            - helm version --client
+            - ansible --version
+            - packer --version            
+      - name: new_pipeliness
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: new_pipeline2
+          runtime:
+            type: image
+            image:
+              auto:
+                language: node 
+                versions:
+                  - "12.14.0"
+        execution:
+          onExecute:
+            - node -v  
+            - npm --version
+            - aws --version
+            - git --version
+            - pip --version
+            - virtualenv --version
+#             - eb --version
+            - az --version
+            - jfrog --version
+            - gcloud version
+            - kubectl version --client
+            - terraform --version
+            - helm version --client
+            - ansible --version
+            - packer --version 
 
 # #ccp
 # pipelines:
