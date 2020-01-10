@@ -295,7 +295,7 @@ pipelines:
       - name: new_pipeline8
         type: Bash
         configuration:
-           inputSteps:
+          inputSteps:
             - name: new_pipeline7
           runtime:
             type: image
