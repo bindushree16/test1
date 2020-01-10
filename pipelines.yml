@@ -244,15 +244,15 @@ pipelines:
 #             - git --version
 #             - pip --version
 #             - virtualenv --version
-            - eb --version
-            - az --version
-            - jfrog --version
-            - gcloud version
-            - kubectl version --client
-            - terraform --version
-            - helm version --client
-            - ansible --version
-            - packer --version 
+#             - eb --version
+#             - az --version
+#             - jfrog --version
+#             - gcloud version
+#             - kubectl version --client
+#             - terraform --version
+#             - helm version --client
+#             - ansible --version
+#             - packer --version 
             
 #       - name: new_pipeline7
 #         type: Bash
