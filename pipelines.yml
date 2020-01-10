@@ -135,7 +135,7 @@ pipelines:
               auto:
                 language: cpp
                 versions:
-                  - 7.0.1
+                  - 8.0.0
         execution:
           onExecute:
             - clang --version
@@ -165,7 +165,7 @@ pipelines:
               auto:
                 language: cpp
                 versions:
-                  - "8.3.1"
+                  - "9.0.0"
         execution:
           onExecute:
             - clang --version
