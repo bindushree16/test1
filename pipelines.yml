@@ -18,7 +18,7 @@ pipelines:
             - git --version
             - pip --version
             - virtualenv --version
-            - eb --version
+            - jq --version
             - az --version
             - jfrog --version
             - gcloud version
@@ -26,7 +26,8 @@ pipelines:
             - terraform --version
             - helm version --client
             - ansible --version
-            - packer --version             
+            - packer --version  
+            - eb --version
 
 
 # # ##node
