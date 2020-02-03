@@ -27,7 +27,7 @@ pipelines:
             - helm version --client
             - ansible --version
             - packer --version  
-            - eb --version
+#             - eb --version
 
 
 # # ##node
