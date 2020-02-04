@@ -3,6 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: github
+      path: bindushree16/test1
 
 pipelines:
 name: utilityfuctiontest1
