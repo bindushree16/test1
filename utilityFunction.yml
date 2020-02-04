@@ -101,5 +101,5 @@ pipelines:
             - pushd $res_repo_pipe_resourcePath
             - restore_pipeline_files jfrog_pipeline $PWD/file.txt
             - cat file.txt
-            - retry_command printen
+            - retry_command printenv
             - popd   
