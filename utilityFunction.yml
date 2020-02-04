@@ -13,7 +13,6 @@ pipelines:
         configuration:
           integrations:
             - name: github
-          integrations:
             - name: docker  
           inputResources:
             - name: repo_pipe
@@ -80,7 +79,6 @@ pipelines:
         configuration:
           integrations:
             - name: github
-          integrations:
             - name: docker  
           inputSteps:
             - name: utilityFunction
@@ -101,7 +99,6 @@ pipelines:
         configuration:
           integrations:
             - name: github
-          integrations:
             - name: docker  
           inputResources:
             - name: repo_pipe
