@@ -1,3 +1,9 @@
+resources:
+  - name: repo_pipe
+    type: GitRepo
+    configuration:
+      gitProvider: github
+
 pipelines:
 name: utilityfuctiontest1
 steps:
@@ -5,7 +11,7 @@ steps:
     type: Bash
     configuration:
       integrations:
-        - name: s_gitHub
+        - name: github
       inputResources:
         - name: repo_pipe
     execution:
@@ -59,7 +65,7 @@ steps:
     type: Bash
     configuration:
       integrations:
-        - name: s_gitHub
+        - name: github
       inputSteps:
         - name: utilityFunction
       inputResources:
@@ -77,7 +83,7 @@ steps:
     type: Bash
     configuration:
       integrations:
-        - name: s_gitHub
+        - name: github
       inputResources:
         - name: repo_pipe
       inputSteps:
@@ -89,10 +95,4 @@ steps:
         - cat file.txt
         - retry_command printen
         - popd
-​
-resources:
-  - name: repo_pipe
-    type: GitRepo
-    configuration:
-      gitProvider: s_gitHub
-      path: bindushree16/test1 
+
