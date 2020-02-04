@@ -15,6 +15,12 @@ pipelines:
             - name: github
           inputResources:
             - name: repo_pipe
+          runtime:            
+            type: image
+            image:
+              custom:
+                name: shippabledocker/jfreq
+                tag: latest 
             
         execution:
           onExecute: 
