@@ -13,6 +13,8 @@ pipelines:
         configuration:
           integrations:
             - name: github
+          integrations:
+            - name: docker  
           inputResources:
             - name: repo_pipe
           runtime:            
@@ -78,6 +80,8 @@ pipelines:
         configuration:
           integrations:
             - name: github
+          integrations:
+            - name: docker  
           inputSteps:
             - name: utilityFunction
           inputResources:
@@ -97,6 +101,8 @@ pipelines:
         configuration:
           integrations:
             - name: github
+          integrations:
+            - name: docker  
           inputResources:
             - name: repo_pipe
           inputSteps:
