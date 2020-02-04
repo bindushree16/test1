@@ -33,8 +33,9 @@ pipelines:
             - echo "Hello frog" >> file.txt
             - touch test.txt
             - echo "Hello pipelines team" >> test.txt
-            - >-
-              compare_git --resource repo_pipe --commit-range HEAD~3..HEAD
+            - compare_git --resource repo_pipe --commit-range HEAD~3..HEAD pipelines.yml
+#             - >-
+#               compare_git --resource repo_pipe --commit-range HEAD~3..HEAD
               pipelines.yml
             - read_json package.json "DOCKER_USERNAME"
             - add_cache_files $PWD/file.txt jfrog_pipe
