@@ -161,7 +161,7 @@ pipelines:
         type: Bash
         configuration:
           inputSteps:
-            - name: new_pipeline2
+            - name: new_pipeliness
           runtime:
             type: image
             image:
