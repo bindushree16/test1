@@ -12,21 +12,22 @@ pipelines:
         type: Bash
         execution:
           onExecute:
-            - node -v 
-            - npm --version
-            - aws --version
-            - git --version
-            - pip --version
-            - virtualenv --version
-            - jq --version
-            - az --version
-            - jfrog --version
-            - gcloud version
-            - kubectl version --client
-            - terraform --version
-            - helm version --client
-            - ansible --version
-            - packer --version  
+            - echo "hi"
+#             - node -v 
+#             - npm --version
+#             - aws --version
+#             - git --version
+#             - pip --version
+#             - virtualenv --version
+#             - jq --version
+#             - az --version
+#             - jfrog --version
+#             - gcloud version
+#             - kubectl version --client
+#             - terraform --version
+#             - helm version --client
+#             - ansible --version
+#             - packer --version  
 #             - eb --version
 
 
