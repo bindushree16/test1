@@ -6,7 +6,7 @@
 #       gitProvider: bi
 
 pipelines:
-  - name: pipelines_auto
+  - name: pipelines_auto11
     steps:
       - name: new_pipelines11
         type: Bash
