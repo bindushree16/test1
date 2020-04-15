@@ -2,7 +2,7 @@ resources:
   - name: myHelm
     type: HelmChart
     configuration: 
-      sourceArtifactory: myArtifactoryIntegration
+      sourceArtifactory: s_artifactory
       repository: helm
       chart: aerospike
       version: 0.1.5
