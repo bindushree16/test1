@@ -4,8 +4,8 @@ resources:
     configuration: 
       sourceArtifactory: myArtifactoryIntegration
       repository: helm-remote
-      chart: consul
-      version: 1.0.0
+      chart: chart
+      version: version
       
       
 pipelines:
