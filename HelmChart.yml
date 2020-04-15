@@ -3,9 +3,9 @@ resources:
     type: HelmChart
     configuration: 
       sourceArtifactory: myArtifactoryIntegration
-      repository: helm-remote
+      repository: helm
       chart: chart
-      version: version
+      version: 1.0.0
       
       
 pipelines:
