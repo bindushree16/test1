@@ -4,8 +4,8 @@ resources:
     configuration: 
       sourceArtifactory: s_artifactory
       repository: helm
-      chart: chart
-      version: 1.0.0
+      chart: aerospike
+      version: 0.1.5
       
       
 pipelines:
