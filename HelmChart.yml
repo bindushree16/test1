@@ -1,0 +1,23 @@
+resources:
+  - name: myHelm
+    type: HelmChart
+    configuration: 
+      sourceArtifactory: myArtifactoryIntegration
+      repository: helm-remote
+      chart: consul
+      version: 1.0.0
+      
+      
+ pipelines:
+   - name: pipelines_auto11
+     steps:
+       - name: new_pipelines11
+         type: Bash
+         configuration: 
+           inputResources:
+             - name: myHelm
+         execution:
+           onExecute:
+             - echo "hi"      
+      
+      
