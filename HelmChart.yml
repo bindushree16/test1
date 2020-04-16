@@ -3,7 +3,7 @@ resources:
     type: HelmChart
     configuration: 
       sourceArtifactory: s_artifactory
-      repository: helm
+      repository: helm-local 
       chart: aerospike
       version: 0.1.5
       
