@@ -4,8 +4,8 @@ resources:
     configuration: 
       sourceArtifactory: s_artifactory
       repository: helm-remote
-      chart: aerospike
-      version: 0.1.5
+      chart: bindu
+      version: 0.0.1
       
       
 pipelines:
