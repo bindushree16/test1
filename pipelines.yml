@@ -1,27 +1,27 @@
-# resources:
-#   - name: GitRepo
-#     type: GitRepo
-#     configuration:
-#       path: bindushree16/test1
-#       gitProvider: bi
-
 resources:
-  - name: myHelmChart
-    type: HelmChart
-    configuration: 
-      sourceArtifactory: myArtifactoryIntegration
-      repository: helm-remote
-      chart: consul
-      version: 1.0.0
+  - name: GitRepo
+    type: GitRepo
+    configuration:
+      path: bindushree16/test1
+      gitProvider: bindu_github
 
-# pipelines:
-#   - name: pipelines_auto11
-#     steps:
-#       - name: new_pipelines11
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - echo "hi"
+# resources:
+#   - name: myHelmChart
+#     type: HelmChart
+#     configuration: 
+#       sourceArtifactory: myArtifactoryIntegration
+#       repository: helm-remote
+#       chart: consul
+#       version: 1.0.0
+
+pipelines:
+  - name: pipelines_auto11
+    steps:
+      - name: new_pipelines11
+        type: Bash
+        execution:
+          onExecute:
+            - echo "hi"
 #             - node -v 
 #             - npm --version
 #             - aws --version
