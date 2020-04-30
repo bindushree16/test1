@@ -15,7 +15,7 @@
     files:
       include: \test\/file\b
       
- pipelines:
+pipelines:
   - name: pipelines_gitHub_11
     steps:
       - name: new_pipelines
