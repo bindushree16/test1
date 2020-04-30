@@ -12,5 +12,5 @@
     gitProvider: bharath_github
     branches:
       include: master
-      files:
+    files:
       include: \test\/file\b
