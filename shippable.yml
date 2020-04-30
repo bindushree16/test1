@@ -1,16 +1,16 @@
 - name: git1
   type: GitRepo
   configuration:
-    path: bharath92/sample-runSh
-    gitProvider: bharath_github
+    path: bindushree16/test1
+    gitProvider: bindu
     branches:
       include: master
-- name: git2
-  type: GitRepo
-  configuration:
-    path: bharath92/sample-runSh
-    gitProvider: bharath_github
-    branches:
-      include: master
-    files:
-      include: \test\/file\b
+# - name: git2
+#   type: GitRepo
+#   configuration:
+#     path: bindushree16/test1
+#     gitProvider: bindu
+#     branches:
+#       include: master
+#     files:
+#       include: \test\/file\b
