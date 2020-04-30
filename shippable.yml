@@ -1,19 +1,20 @@
-- name: git1
-  type: GitRepo
-  configuration:
-    path: bindushree16/test1
-    gitProvider: bindu
-    branches:
-      include: master
-- name: git2
-  type: GitRepo
-  configuration:
-    path: bindushree16/test1
-    gitProvider: bindu
-    branches:
-      include: master
-    files:
-      include: \test\/file\b
+resources:
+  - name: git1
+    type: GitRepo
+    configuration:
+      path: bindushree16/test1
+      gitProvider: bindu
+      branches:
+        include: master 
+  - name: git2
+    type: GitRepo
+    configuration:
+      path: bindushree16/test1
+      gitProvider: bindu
+      branches:
+        include: master
+      files:
+        include: ^file.sh$
       
 pipelines:
   - name: pipelines_gitHub_11
