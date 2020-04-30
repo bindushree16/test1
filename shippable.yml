@@ -5,12 +5,25 @@
     gitProvider: bindu
     branches:
       include: master
-# - name: git2
-#   type: GitRepo
-#   configuration:
-#     path: bindushree16/test1
-#     gitProvider: bindu
-#     branches:
-#       include: master
-#     files:
-#       include: \test\/file\b
+- name: git2
+  type: GitRepo
+  configuration:
+    path: bindushree16/test1
+    gitProvider: bindu
+    branches:
+      include: master
+    files:
+      include: \test\/file\b
+      
+ pipelines:
+  - name: pipelines_gitHub_11
+    steps:
+      - name: new_pipelines
+        type: Bash
+        configuration:
+          inputResources: 
+            - name: git1
+            - name: git2
+        execution:
+          onExecute:
+            - echo "hi"     
