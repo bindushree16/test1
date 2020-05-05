@@ -27,9 +27,4 @@ pipelines:
             - name: git2
         execution:
           onExecute:
-            - echo "hi"   
-            
-            
-            
-            
-            
+            - echo "hi"  
