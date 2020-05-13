@@ -19,6 +19,8 @@ pipelines:
     steps:
       - name: new_pipelines11
         type: Bash
+        configuration: 
+          nodePool: bindu_win_node
         execution:
           onExecute:
             - echo "hi"
