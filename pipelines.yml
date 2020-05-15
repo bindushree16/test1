@@ -20,7 +20,7 @@ pipelines:
       - name: new_pipelines11
         type: Bash
         configuration: 
-          nodePool: bindu_u18_node
+          nodePool: bindu_u16_node
         execution:
           onExecute:
             - echo "hi"
