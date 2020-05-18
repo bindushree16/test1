@@ -15,12 +15,12 @@ resources:
 #       version: 1.0.0
 
 pipelines:
-  - name: pipelines_auto11
+  - name: sample_SteptestReports
     steps:
-      - name: new_pipelines11
+      - name: my_SteptestReports
         type: Bash
-        configuration: 
-          nodePool: bindu_u16_node
+#         configuration: 
+#           nodePool: bindu_u16_node
         execution:
           onExecute:
             - echo "hi"
