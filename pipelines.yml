@@ -24,8 +24,8 @@ pipelines:
         execution:
           onExecute:
             - echo "hi"
-#             - node -v 
-#             - npm --version
+            - node -v 
+            - npm --version
 #             - aws --version
 #             - git --version
 #             - pip --version
