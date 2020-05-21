@@ -4,6 +4,10 @@ resources:
     configuration:
       path: bindushree16/test1
       gitProvider: bindu_github
+      branches: 
+        include: master
+      files:  
+        include: pipelines.yml
 
 # resources:
 #   - name: myHelmChart
