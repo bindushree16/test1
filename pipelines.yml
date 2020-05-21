@@ -19,8 +19,8 @@ pipelines:
     steps:
       - name: my_SteptestReports
         type: Bash
-#         configuration: 
-#           nodePool: bindu_u16_node
+        configuration: 
+          nodePool: bindu_win_node
         execution:
           onExecute:
             - echo "hi"
