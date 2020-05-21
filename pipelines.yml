@@ -8,12 +8,6 @@ resources:
         include: master
       files:  
         include: pipelines.yml
-
-
-
-
-
-
 # resources:
 #   - name: myHelmChart
 #     type: HelmChart
