@@ -21,7 +21,7 @@ pipelines:
   - name: sample_SteptestReports_2
     steps:
       - name: my_SteptestReports
-         type: Bash
+        type: Bash
 #         configuration: 
 #           nodePool: bindu_win_node
         execution:
