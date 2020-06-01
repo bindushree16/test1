@@ -18,7 +18,7 @@ resources:
 #       version: 1.0.0
 
 pipelines:
-  - name: sample_SteptestReports
+  - name: sample_SteptestReports_0
     steps:
       - name: my_SteptestReports
         type: Bash
