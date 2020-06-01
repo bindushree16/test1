@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       path: bindushree16/test1
-      gitProvider: bindu_githubb
+      gitProvider: bindu_github
       branches: 
         include: master
       files:  
@@ -21,7 +21,7 @@ pipelines:
   - name: sample_SteptestReports_2
     steps:
       - name: my_SteptestReports
-        type: Bash
+         type: Bash
 #         configuration: 
 #           nodePool: bindu_win_node
         execution:
