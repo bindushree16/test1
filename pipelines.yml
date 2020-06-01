@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       path: bindushree16/test1
-      gitProvider: bindu_github
+      gitProvider: bindu_githubb
       branches: 
         include: master
       files:  
