@@ -1,0 +1,45 @@
+resources:
+  - name: my_repo
+    type: GitRepo
+    configuration:
+      path: bindushree16/test1
+      branches:
+        include: ^master$
+      gitProvider: bindu_github
+
+
+pipelines:
+  - name: Pipelines_martrix
+    steps:
+      - name: my_Step
+        type: Matrix
+        stepMode: Bash
+        configuration:
+          inputResources:
+            - name: my_repo
+        matrix:
+          environmentVariables:
+            - env1: one
+              env2: two
+              env3: three
+            - env1: changed1
+              env2: changed2
+            - key_1: value1
+              key_2: value2
+          runtimes:
+            - type: image
+              image:
+                auto:
+                  language: java
+                  versions:
+                    - 13.0
+            - type: image
+              image:
+                auto:
+                  language: node
+                  versions:
+                    - 8.17.0
+        execution:
+          onExecute:
+            - echo "hi"
+ 
