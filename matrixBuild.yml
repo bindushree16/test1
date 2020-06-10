@@ -42,4 +42,6 @@ pipelines:
         execution:
           onExecute:
             - echo "hi"
+            - java -v
+            - node --version 
  
