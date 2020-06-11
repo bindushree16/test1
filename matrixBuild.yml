@@ -41,7 +41,21 @@ pipelines:
                     - 8.17.0
         execution:
           onExecute:
-            - echo "hi"
-            - java -v
-            - node --version 
+            - echo "hi"       
+            - touch ${steplet_id}_file
+            - echo "Envs env1 = $env1 , env2 = $env2 , env3 = $env3" >> ${steplet_id}_file
+            - set_step_var key "https://www.go.in/${env1}/${steplet_id}"
+            
+            
+      - name: Matrix_Fan_In_step
+        type: FanIn
+        configuration:
+          inputSteps: 
+            - name: my_Step
+        execution:
+          onExecute:
+            - echo "Hello"
+            - ls -l .
+            - ls -l ./my_Step
+            - get_step_var my_Step key       
  
