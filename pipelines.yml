@@ -29,26 +29,26 @@ pipelines:
             - echo "hi"
             
 
-  - name: sample_SteptestReports_11
-    steps:
-      - name: my_SteptestReports_1
-        type: Bash
-#         configuration: 
-#           nodePool: bindu_win_node
-        execution:
-          onExecute:
-            - echo "hi"    
+#   - name: sample_SteptestReports_11
+#     steps:
+#       - name: my_SteptestReports_1
+#         type: Bash
+# #         configuration: 
+# #           nodePool: bindu_win_node
+#         execution:
+#           onExecute:
+#             - echo "hi"    
             
 
-  - name: sample_SteptestReports_111
-    steps:
-      - name: my_SteptestReports_2
-        type: Bash
-#         configuration: 
-#           nodePool: bindu_win_node
-        execution:
-          onExecute:
-            - echo "hi"            
+#   - name: sample_SteptestReports_111
+#     steps:
+#       - name: my_SteptestReports_2
+#         type: Bash
+# #         configuration: 
+# #           nodePool: bindu_win_node
+#         execution:
+#           onExecute:
+#             - echo "hi"            
 #             - node -v 
 #             - npm --version
 #             - aws --version
