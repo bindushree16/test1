@@ -10,13 +10,13 @@
 
 
 pipelines:
-  - name: Pipeline
+  - name: Pipeline@@
     steps:
       - name: Matrix_Fan_In_step
         type: FanIn
-        configuration:
-          inputSteps: 
-            - name: my_Step
+#         configuration:
+#           inputSteps: 
+#             - name: my_Step
         execution:
           onExecute:
             - echo "Hello"
