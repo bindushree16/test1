@@ -41,7 +41,7 @@ pipelines:
         configuration:
           inputResources:
             - name: my_repo
-        matrix:
+        stepletMultipliers:
           environmentVariables:
             - env1: onee
         execution:
@@ -53,7 +53,7 @@ pipelines:
         configuration:
           inputSteps: 
             - name: my_Step_1
-        matrix:
+        stepletMultipliers:
           environmentVariables:
             - env1: one
               env2: two
