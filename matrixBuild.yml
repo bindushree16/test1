@@ -50,7 +50,7 @@ pipelines:
         stepMode: Bash
         configuration:
           inputSteps: 
-            - name: FanOut_Matrix_2
+#             - name: FanOut_Matrix_2
             - name: FanOut_Matrix_1
         stepletMultipliers:
           environmentVariables:
