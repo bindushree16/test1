@@ -26,9 +26,9 @@ pipelines:
 
       - name: FanOut_Matrix_2
         type: FanOut
-#         configuration:
-#           inputSteps: 
-#             - name: FanOut_Matrix_1      
+        configuration:
+          inputSteps: 
+            - name: FanOut_Matrix_1      
         execution: 
           onExecute:
             - echo "I am on fan out step"
