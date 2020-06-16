@@ -1,11 +1,11 @@
-# resources:
-#   - name: my_repo
-#     type: GitRepo
-#     configuration:
-#       path: bindushree16/test1
-#       branches:
-#         include: ^master$
-#       gitProvider: bindu_github
+resources:
+  - name: my_repo
+    type: GitRepo
+    configuration:
+      path: bindushree16/test1
+      branches:
+        include: ^master$
+      gitProvider: bindu_github
       
 
 
@@ -35,38 +35,49 @@ pipelines:
     
     
     
-    
-#       - name: my_Step
-#         type: Matrix
-#         stepMode: Bash
-#         configuration:
-#           inputResources:
-#             - name: my_repo
-#         matrix:
-#           environmentVariables:
-#             - env1: one
-#               env2: two
-#               env3: three
-#             - env1: changed1
-#               env2: changed2
-#             - key_1: value1
-#               key_2: value2
-#           runtimes:
-#             - type: image
-#               image:
-#                 auto:
-#                   language: java
-#                   versions:
-#                     - 13.0
-#             - type: image
-#               image:
-#                 auto:
-#                   language: node
-#                   versions:
-#                     - 8.17.0
-#         execution:
-#           onExecute:
-#             - echo "hi"       
+      - name: my_Step_1
+        type: Matrix
+        stepMode: Bash
+        configuration:
+          inputResources:
+            - name: my_repo
+        matrix:
+          environmentVariables:
+            - env1: onee
+        execution:
+          onExecute:
+            - echo "hi"       
+      - name: my_Step
+        type: Matrix
+        stepMode: Bash
+        configuration:
+          inputSteps: 
+            - name: my_Step_1
+        matrix:
+          environmentVariables:
+            - env1: one
+              env2: two
+              env3: three
+            - env1: changed1
+              env2: changed2
+            - key_1: value1
+              key_2: value2
+          runtimes:
+            - type: image
+              image:
+                auto:
+                  language: java
+                  versions:
+                    - 13.0
+            - type: image
+              image:
+                auto:
+                  language: node
+                  versions:
+                    - 8.17.0
+        execution:
+          onExecute:
+            - echo "hi"       
 #             - touch ${steplet_id}_file
 #             - echo "Envs env1 = $env1 , env2 = $env2 , env3 = $env3" >> ${steplet_id}_file
 #             - set_step_var key "https://www.go.in/${env1}/${steplet_id}"
@@ -74,29 +85,29 @@ pipelines:
             
       - name: Matrix_Fan_In_step
         type: FanIn
-#         configuration:
-#           inputSteps: 
-#             - name: my_Step
+        configuration:
+          inputSteps: 
+            - name: my_Step
         execution:
           onExecute:
             - echo "Hello"
 #             - ls -l .
 #             - ls -l ./my_Step
 #             - get_step_var my_Step key 
-      - name: Matrix_Fan
-        type: FanIn
-        configuration:
-          inputSteps: 
-            - name: Matrix_Fan_In_step
-        execution:
-          onExecute:
-            - echo "Hello"
-      - name: Matrix_Fan22
-        type: FanIn
-        configuration:
-          inputSteps: 
-            - name: Matrix_Fan
-        execution:
-          onExecute:
-            - echo "Hello"      
+#       - name: Matrix_Fan
+#         type: FanIn
+#         configuration:
+#           inputSteps: 
+#             - name: Matrix_Fan_In_step
+#         execution:
+#           onExecute:
+#             - echo "Hello"
+#       - name: Matrix_Fan22
+#         type: FanIn
+#         configuration:
+#           inputSteps: 
+#             - name: Matrix_Fan
+#         execution:
+#           onExecute:
+#             - echo "Hello"      
  
