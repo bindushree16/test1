@@ -12,7 +12,7 @@
 pipelines:
   - name: Pipeline
     steps:
-      - name: FanOut_Matrix_1
+      - name: FanOut_Matrix-*$
         type: FanOut
 #         configuration:
 #           inputSteps: 
