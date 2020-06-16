@@ -82,5 +82,21 @@ pipelines:
             - echo "Hello"
 #             - ls -l .
 #             - ls -l ./my_Step
-#             - get_step_var my_Step key       
+#             - get_step_var my_Step key 
+      - name: Matrix_Fan
+        type: FanIn
+        configuration:
+          inputSteps: 
+            - name: Matrix_Fan_In_step
+        execution:
+          onExecute:
+            - echo "Hello"
+      - name: Matrix_Fan22
+        type: FanIn
+        configuration:
+          inputSteps: 
+            - name: Matrix_Fan
+        execution:
+          onExecute:
+            - echo "Hello"      
  
