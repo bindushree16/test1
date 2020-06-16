@@ -77,9 +77,17 @@ pipelines:
         execution:
           onExecute:
             - echo "hi"       
+            - ls -l ./FanOut_Matrix_1
             - touch ${steplet_id}_file
+            - echo "Created file on steplet ${steplet_id}" > ${steplet_id}_file
             - echo "Envs env1 = $env1 , env2 = $env2 , env3 = $env3" >> ${steplet_id}_file
+            - echo "Runtime image name - $step_image_name, Runtime image tag - $step_image_tag" >> ${steplet_id}_file
+            - set_step_var test_key "$(date)"
             - set_step_var key "https://www.go.in/${env1}/${steplet_id}"
+            - get_step_var FanOut_Matrix_1 fan_out
+            - pushd "$res_my_repo_resourcePath/"
+            
+           
             
             
       - name: martix_FanInnnn
@@ -94,7 +102,7 @@ pipelines:
             - echo "I am on fan out step"
             - ls -l .
             - ls -l ./my_Step
-            - ls -l ./my_Step/Matrix_Fan_Out_1/
+            - ls -l ./my_Step/FanOut_Matrix_1/
             - get_step_var my_Step test_key
             - get_step_var my_Step addresses
 #       - name: Matrix_Fan
