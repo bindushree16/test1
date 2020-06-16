@@ -10,7 +10,7 @@
 
 
 pipelines:
-  - name: Pipeline*$
+  - name: Pipeline
     steps:
 #       - name: FanOut_Matrix_1
 #         type: FanOut
