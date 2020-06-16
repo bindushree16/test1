@@ -13,16 +13,13 @@ pipelines:
   - name: Pipeline
     steps:
       - name: FanOut_Matrix_1
-        type: FanOut
-#         configuration:
-#           inputSteps: 
-#             - name: Matrix_Fan_In_step      
+        type: FanOut    
         execution: 
           onExecute:
             - echo "I am on fan out step"
-#             - touch fan_out.txt
-#             - set_step_var fan_out value1
-#             - echo "Fan out working" > fan_out_1.txt
+            - touch fan_out.txt
+            - set_step_var fan_out value1
+            - echo "Fan out working" > fan_out_1.txt
 
 #       - name: FanOut_Matrix_2
 #         type: FanOut
@@ -48,41 +45,41 @@ pipelines:
 #           onExecute:
 #             - echo "hi"   
             
-#       - name: my_Step
-#         type: Matrix
-#         stepMode: Bash
-#         configuration:
-#           inputSteps: 
-#             - name: FanOut_Matrix_2
-#             - name: FanOut_Matrix_1
-#         stepletMultipliers:
-#           environmentVariables:
-#             - env1: one
-#               env2: two
-#               env3: three
-#             - env1: changed1
-#               env2: changed2
-#             - key_1: value1
-#               key_2: value2
-#           runtimes:
-#             - type: image
-#               image:
-#                 auto:
-#                   language: java
-#                   versions:
-#                     - 13.0
-#             - type: image
-#               image:
-#                 auto:
-#                   language: node
-#                   versions:
-#                     - 8.17.0
-#         execution:
-#           onExecute:
-#             - echo "hi"       
-#             - touch ${steplet_id}_file
-#             - echo "Envs env1 = $env1 , env2 = $env2 , env3 = $env3" >> ${steplet_id}_file
-#             - set_step_var key "https://www.go.in/${env1}/${steplet_id}"
+      - name: my_Step
+        type: Matrix
+        stepMode: Bash
+        configuration:
+          inputSteps: 
+            - name: FanOut_Matrix_2
+            - name: FanOut_Matrix_1
+        stepletMultipliers:
+          environmentVariables:
+            - env1: one
+              env2: two
+              env3: three
+            - env1: changed1
+              env2: changed2
+            - key_1: value1
+              key_2: value2
+          runtimes:
+            - type: image
+              image:
+                auto:
+                  language: java
+                  versions:
+                    - 13.0
+            - type: image
+              image:
+                auto:
+                  language: node
+                  versions:
+                    - 8.17.0
+        execution:
+          onExecute:
+            - echo "hi"       
+            - touch ${steplet_id}_file
+            - echo "Envs env1 = $env1 , env2 = $env2 , env3 = $env3" >> ${steplet_id}_file
+            - set_step_var key "https://www.go.in/${env1}/${steplet_id}"
             
             
       - name: martix_FanInnnn
@@ -90,19 +87,16 @@ pipelines:
         configuration:
           inputSteps: 
 #             - name: FanOut_Matrix_2
-            - name: FanOut_Matrix_1
+            - name: my_Step
         execution:
           onExecute:
             - echo "Hello"
-             - echo "I am on fan out step"
-            - touch fan_out.txt
-            - set_step_var fan_out value1
-            - echo "Fan out working" > fan_out_1.txt
-#             - ls -l .
-# #             - ls -l ./my_Step   
-#             - ls -l ./FanOut_Matrix_1  
-#             - get_step_var FanOut_Matrix_1 FanOut_Matrix_1
-#             - get_step_var my_Step key 
+            - echo "I am on fan out step"
+            - ls -l .
+            - ls -l ./my_Step
+            - ls -l ./my_Step/Matrix_Fan_Out_1/
+            - get_step_var my_Step test_key
+            - get_step_var my_Step addresses
 #       - name: Matrix_Fan
 #         type: FanIn
 #         configuration:
@@ -118,5 +112,6 @@ pipelines:
 #             - name: Matrix_Fan
 #         execution:
 #           onExecute:
-#             - echo "Hello"      
+#             - echo "Hello" 
+
  
