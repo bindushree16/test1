@@ -86,7 +86,8 @@ pipelines:
             - set_step_var key "https://www.go.in/${env1}/${steplet_id}"
             - get_step_var FanOut_Matrix_1 fan_out
             - pushd "$res_my_repo_resourcePath/"
-            
+            - popd
+            - ls -l .
            
             
             
