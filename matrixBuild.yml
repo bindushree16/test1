@@ -12,11 +12,21 @@
 pipelines:
   - name: Pipeline
     steps:
-      - name: FanOut_Matrix-*$
+      - name: Matrix_Fan_In_step
+        type: FanIn
+        configuration:
+          inputSteps: 
+            - name: my_Step
+        execution:
+          onExecute:
+            - echo "Hello"
+    
+    
+      - name: FanOut_Matrix_1
         type: FanOut
-#         configuration:
-#           inputSteps: 
-#             - name: Normal_Step      
+        configuration:
+          inputSteps: 
+            - name: Matrix_Fan_In_step      
         execution: 
           onExecute:
             - echo "I am on fan out step"
