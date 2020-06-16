@@ -10,7 +10,7 @@
 
 
 pipelines:
-  - name: Pipeline@@
+  - name: Pipeline*$
     steps:
       - name: Matrix_Fan_In_step
         type: FanIn
