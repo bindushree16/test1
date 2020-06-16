@@ -1,16 +1,16 @@
-resources:
-  - name: my_repo
-    type: GitRepo
-    configuration:
-      path: bindushree16/test1
-      branches:
-        include: ^master$
-      gitProvider: bindu_github
+# resources:
+#   - name: my_repo
+#     type: GitRepo
+#     configuration:
+#       path: bindushree16/test1
+#       branches:
+#         include: ^master$
+#       gitProvider: bindu_github
       
 
 
 pipelines:
-  - name: Pipelines_martrix
+  - name: Pipeline
     steps:
       - name: FanOut_Matrix
         type: FanOut
