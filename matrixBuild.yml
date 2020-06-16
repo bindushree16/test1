@@ -24,14 +24,14 @@ pipelines:
             - set_step_var fan_out value1
             - echo "Fan out working" > fan_out_1.txt
 
-      - name: FanOut_Matrix_2
-        type: FanOut
-        configuration:
-          inputSteps: 
-            - name: FanOut_Matrix_1      
-        execution: 
-          onExecute:
-            - echo "I am on fan out step"
+#       - name: FanOut_Matrix_2
+#         type: FanOut
+#         configuration:
+#           inputSteps: 
+#             - name: FanOut_Matrix_1      
+#         execution: 
+#           onExecute:
+#             - echo "I am on fan out step"
     
     
     
@@ -85,11 +85,11 @@ pipelines:
 #             - set_step_var key "https://www.go.in/${env1}/${steplet_id}"
             
             
-      - name: Matrix_Fan_In_step
+      - name: 
         type: FanIn
         configuration:
           inputSteps: 
-            - name: FanOut_Matrix_2
+#             - name: FanOut_Matrix_2
             - name: FanOut_Matrix_1
         execution:
           onExecute:
