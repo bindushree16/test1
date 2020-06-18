@@ -18,12 +18,12 @@ resources:
 #       version: 1.0.0
 
 pipelines:
-  - name: sample_SteptestReports
+  - name: sample_pipelines
     steps:
-      - name: my_SteptestReports
+      - name: my_Steptest
         type: Bash
-#         configuration: 
-#           nodePool: bindu_win_node
+        configuration: 
+          nodePool: u18dynamic_azure_bindu
         execution:
           onExecute:
             - echo "hi"
