@@ -23,7 +23,7 @@ pipelines:
       - name: my_Steptest
         type: Bash
         configuration: 
-          nodePool: u18-us-east
+          nodePool: u16_azure_bindu
         execution:
           onExecute:
             - echo "hi"
