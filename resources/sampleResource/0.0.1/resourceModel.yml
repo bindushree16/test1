@@ -8,4 +8,4 @@ configuration:
   resourceList:
     type: String[]
     validate:
-      contains: "resources"
+      contains: "resource"
