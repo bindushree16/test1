@@ -1,6 +1,6 @@
 configuration:
   resourceFoo:
-    type: Int
+    type: String
   resourceIntegration:
     type: Integration
     validate:
