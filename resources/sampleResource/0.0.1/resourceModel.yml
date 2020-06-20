@@ -1,11 +1,11 @@
 configuration:
-  resourceFoo:
-    type: Int
+#   resourceFoo:
+#     type: Int
   resourceIntegration:
     type: Integration
     validate:
       isIntegrationType: "Artifactory"
-  resourceList:
-    type: String[]
-    validate:
-      contains: "resource"
+#   resourceList:
+#     type: String[]
+#     validate:
+#       contains: "resource"
