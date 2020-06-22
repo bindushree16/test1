@@ -1,4 +1,6 @@
 configuration:
   foo:
     type: String
+  notifyOnSuccess:
+    type: Boolean  
 description: "hi"     
