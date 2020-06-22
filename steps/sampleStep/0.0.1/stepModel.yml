@@ -1,4 +1,4 @@
 configuration:
   foo:
     type: String
-description: "development"     
+description: "hi"     
