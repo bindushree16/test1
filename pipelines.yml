@@ -23,7 +23,7 @@ pipelines:
       - name: my_Steptest
         type: Bash
         configuration: 
-          nodePool: testing_node
+          nodePool: azure_dynamic_node
         execution:
           onExecute:
             - echo "hi"
