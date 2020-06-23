@@ -27,6 +27,7 @@ pipelines:
         execution:
           onExecute:
             - echo "hi"
+            - sleep 2m
 #             - node -v 
 #             - npm --version
 #             - aws --version
