@@ -99,6 +99,7 @@ pipelines:
             - name: my_Step
         execution:
           onExecute:
+            - printenv
             - echo "Hello"
             - echo "I am on fan out step"
             - ls -l .
