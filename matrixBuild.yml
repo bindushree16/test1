@@ -13,7 +13,7 @@ pipelines:
   - name: Pipeline
     steps:
       - name: FanOut_Matrix_1
-        type: FanOut    
+        type: PreMatrix    
         execution: 
           onExecute:
             - echo "I am on fan out step"
@@ -92,7 +92,7 @@ pipelines:
             
             
       - name: martix_FanInnnn
-        type: FanIn
+        type: PostMatrix
         configuration:
           inputSteps: 
 #             - name: FanOut_Matrix_2
