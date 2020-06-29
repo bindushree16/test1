@@ -4,7 +4,7 @@ configuration:
   resourceIntegration:
     type: Integration
     validate:
-      isIntegrationType: "GitHub" #Artifactory
+      isIntegrationType: "Artifactory" #GitHub
 #   resourceList:
 #     type: String[]
 #     validate:
