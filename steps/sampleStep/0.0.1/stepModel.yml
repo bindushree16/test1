@@ -1,7 +1,5 @@
 configuration:
   foo:
-    type: String
-  boo:
     type: String  
 #   notifyOnSuccess:
 #     type: Boolean  
